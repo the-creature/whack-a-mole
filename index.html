@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game" class="container">
+    <div class="score-container">
+      <div>
+        <label for="countdown">Timer:</label>
+        <input id="countdown" name="countdown" value="0" readonly />
+      </div>
+      <div>
+        <label for="score">Score:</label>
+        <input id="score" name="score" value="0" readonly />
+      </div>
+    </div>
+    <div class="stage">
+      <div class="row">
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+      </div>
+      <div class="row">
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+      </div>
+      <div class="row">
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+      </div>
+    </div>
+    <div class="toolbar">
+      <button class="start">Start</button>
+      <button class="stop">Stop</button>
+      <button class="reset">Reset</button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

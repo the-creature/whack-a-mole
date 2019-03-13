@@ -1,0 +1,96 @@
+body {
+  background: #999999;
+}
+.container {
+  max-width: 560px;
+  margin: 0 auto;
+  background: url('images/grass.png');
+}
+.score-container {
+  padding: 16px 32px;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+}
+.stage {
+  display: flex;
+  flex-direction: row;
+  z-index: -2;
+  padding: 0 20px 60px 20px;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hole {
+  height: 180px;
+  flex-grow: 1;
+  position: relative;
+}
+
+.hole.active:hover {
+  cursor: pointer;
+}
+
+.hole::before {
+  content: '';
+  width: 150px;
+  height: 70px;
+  margin-left: 8px;
+  background: black;
+  -moz-border-radius: 100px / 50px;
+  -webkit-border-radius: 100px / 50px;
+  border-radius: 100px / 50px;
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  z-index: 1;
+}
+
+.hole::after {
+  content: '';
+  background: url('images/mole.png');
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: -30px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  transition: bottom 0.5s ease;
+}
+
+.hole.active::after {
+  bottom: 0;
+  z-index: 2;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+.toolbar button {
+  width: 100px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+#score,
+#countdown {
+  padding: 10px;
+  background: #eee;
+  border: none;
+  font-family: Arial;
+  font-size: 16px;
+}
+
+label {
+  color: #fff;
+}
